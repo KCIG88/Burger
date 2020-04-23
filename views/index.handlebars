@@ -1,38 +1,20 @@
-<h1>Burger-List!</h1>
+<div id="headTitle" class="container">
+  <h1>Burger-List!</h1>
+</div>
 
-<h2>Burgers not devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#unless isDevoured}}
-  {{> burgers/burger-block isDevoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if isDevoured}}
-  {{> burgers/burger-block isDevoured=false}}
-  {{/if}}
-  {{/each}}
-</ul>
-
+<div id="addBurger" class="container">
 <h2>Add a Burger</h2>
-<form class="create-form">
+<form method="POST" action="/api/burgers" class="create-form">
 
   <div class="form-group">
-    <label for="bur">Burger Name:</label>
-    <input type="text" id="bur" burger_name="name">
+    <label for="bur" ></label>
+    <input style="text-align: center;" placeholder="Burger Name" type="text" id="burg" burger_name="burger_name">
   </div>
+</div>
+<div id="subButton">
+  <button type="submit" class="btn btn-warning btn-lg create-form">Add Burger</button>
 
-  <div class="form-group">
-    <label for="isDevoured">Devour status?</label><br>
-    <input type="radio" name="isDevoured" value="1" checked> Undevoured<br>
-    <input type="radio" name="isDevoured" value="0"> Devoured
-  </div>
-
-  <button type="submit">Add Burger</button>
+</div>
 </form>
+  

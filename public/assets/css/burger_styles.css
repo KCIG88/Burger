@@ -19,5 +19,28 @@ li {
   }
   
   body {
-    background-color: grey
+    background-color: green;
   }
+
+  h1 {
+    text-align: center;
+  }
+
+  #headTitle{
+background-color: rgb(245, 155, 53);
+padding: 50px;
+margin-top: 10px;
+
+  }
+
+h2{
+  text-align: center;
+}
+.form-group{
+  text-align: center;
+}
+
+#subButton{
+  margin-left: 700px;
+  
+}
